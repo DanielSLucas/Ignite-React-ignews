@@ -11,4 +11,5 @@ import { Client } from "faunadb";
 // (getServerSideProps, getStaticProps, Serveless functions)
 export const fauna = new Client({
   secret: process.env.FAUNADB_KEY,
+  domain: "db.us.fauna.com",
 });
