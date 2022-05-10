@@ -1,0 +1,21 @@
+{
+  "id": "21d1b078-3345-42b6-a8d3-c6aa04576c27",
+  "uid": "sequi-et-architecto",
+  "type": "posts",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Harness holistic ROI",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Officia anim aliqua magna non exercitation consectetur sit fugiat nisi qui.",
+        "spans": []
+      }
+    ]
+  }
+}
