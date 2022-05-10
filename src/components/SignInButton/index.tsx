@@ -28,5 +28,3 @@ export function SignInButton () {
     </button>
   );
 }
-
-export default SignInButton;
