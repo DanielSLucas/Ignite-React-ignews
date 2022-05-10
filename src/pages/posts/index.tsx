@@ -5,6 +5,7 @@ import { asText } from '@prismicio/helpers';
 import { createClient } from '../../services/prismicio';
 
 import styles from '../../styles/posts.module.scss';
+import Link from 'next/link';
 
 type Post = {
   slug: string;
@@ -26,13 +27,15 @@ export default function Posts({ posts }: PostProps) {
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map(post => (
-            <a href='#' key={post.slug}>
-              <time>{post.updatedAt}</time>
-              <strong>{post.title}</strong>
-              <p>
-                {post.excerpt}
-              </p>
-            </a>
+            <Link href={`/posts/${post.slug}`} key={post.slug}>
+              <a>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>
+                  {post.excerpt}
+                </p>
+              </a>
+            </Link>
           ))}
         </div>
       </main>
