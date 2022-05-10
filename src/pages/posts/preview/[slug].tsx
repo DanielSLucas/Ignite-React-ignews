@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { asHTML } from "@prismicio/helpers";
 import { asText } from "@prismicio/richtext";
@@ -58,11 +58,11 @@ export default function PostPreview({ post }: PostPreviewProps) {
   );
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: [],
     fallback: "blocking",
-  }
+  };
 }
 
 export const getStaticProps: GetStaticProps = async ({ previewData, params }) => {
@@ -86,6 +86,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData, params }) =>
   return {
     props: {
       post,
-    }
+    },
+    revalidate: 60 * 30, // 30 minutes
   };
 }
