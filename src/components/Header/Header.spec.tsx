@@ -25,6 +25,10 @@ describe("Header component", () => {
       <Header />
     );    
   
+    // gera uma url que pemite ver o html gerado além de gerar o código para
+    // selecionar um elemento específico
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("Posts")).toBeInTheDocument();
   })
